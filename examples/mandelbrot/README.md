@@ -2,7 +2,7 @@ This directory contains several code examples that compute the
 [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set). All programs
 need a command-line argument `N` to specify the dimensions of the grid on
 which the Mandelbrot set is computed. The actual dimensions are `3N` (from
--1 to 2) in the x-direction and `2N` (from -1 to +1) in the y-direction. For
+-2 to 1) in the x-direction and `2N` (from -1 to +1) in the y-direction. For
 each example, a Slurm jobscript is provided that shows how the code can be
 compiled and profiled with LinaroForge MAP. The jobscripts have been tested
 on the KU Leuven/UHasselt Tier-2 infrastructure and will require modifications
