@@ -10,8 +10,8 @@ module load LinaroForge
 module load foss/2023a
 
 # Compilation
-mpicc -march=native -O3 -g mandelbrot.c -o mandelbrot
-mpicc -DUSE_AVX2 -march=native -O3 -g mandelbrot.c -o mandelbrot_avx2
+mpicc -march=native -O3 -g1 -fno-inline -fno-optimize-sibling-calls mandelbrot.c -o mandelbrot
+mpicc -DUSE_AVX2 -march=native -O3 -g1 -fno-inline -fno-optimize-sibling-calls mandelbrot.c -o mandelbrot_avx2
 
 do_runs() {
     for suffix in "" "_avx2"

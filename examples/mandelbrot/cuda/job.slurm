@@ -12,7 +12,7 @@ module load CUDA/12.4.0
 
 export N=17280
 export blocksize=32
-nvcc -O3 -g mandelbrot.cu -o mandelbrot
+nvcc -O3 -g -lineinfo mandelbrot.cu -o mandelbrot
 executable=${SLURM_SUBMIT_DIR}/mandelbrot
 cd $VSC_SCRATCH
 ${executable} $N ${blocksize}

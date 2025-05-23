@@ -10,8 +10,8 @@ module load LinaroForge
 module load foss/2023a
 
 export N=17280
-gcc -march=native -O3 -g mandelbrot.c -o mandelbrot
-gcc -DUSE_AVX2 -march=native -O3 -g mandelbrot.c -o mandelbrot_avx2
+gcc -march=native -O3 -g1 -fno-inline -fno-optimize-sibling-calls mandelbrot.c -o mandelbrot
+gcc -DUSE_AVX2 -march=native -O3 -g1 -fno-inline -fno-optimize-sibling-calls mandelbrot.c -o mandelbrot_avx2
 
 for suffix in "" "_avx2"
 do
